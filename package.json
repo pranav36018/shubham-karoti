@@ -1,0 +1,14 @@
+{
+  "name": "shubham-karoti-maitreyi-gurukula",
+  "version": "1.0.0",
+  "description": "Shubham Karoti Maitreyi Gurukula - Official Website & Student Management Portal",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

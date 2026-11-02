@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-midnight: #0F172A;
+  --color-brand-burgundy: #702E42;
+  --color-brand-porcelain: #FAF9F6;
+  --color-brand-champagne: #D5B989;
+  --color-brand-amber: #B45309;
+  --color-brand-gold: #F59E0B;
+  --color-brand-slate: #334155;
+  --color-brand-charcoal: #1E293B;
+  --color-brand-white: #FFFFFF;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-devanagari: "Noto Serif Devanagari", serif;
+  --font-kannada: "Noto Sans Kannada", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FAF9F6;
+    color: #1E293B;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    line-height: 1.8;
+    font-size: 18px;
+    background-color: #FAF9F6;
+    color: #1E293B;
+    width: 100%;
+  }
+
+  h1, h2, h3, h4, .font-serif-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+    color: inherit;
+  }
+
+  .font-editorial-quote {
+    font-family: var(--font-editorial);
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* HIGH-CONTRAST EDITORIAL TYPOGRAPHY SCALE (GRAND & VISIBLE)   */
+/* ------------------------------------------------------------- */
+
+/* Hero heading: 92-108px on desktop (Bold, authoritative, imposing) */
+.typography-hero {
+  font-family: var(--font-serif);
+  font-size: 3.25rem; /* 52px on mobile */
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+@media (min-width: 640px) {
+  .typography-hero {
+    font-size: 4.5rem; /* 72px on tablet */
+  }
+}
+@media (min-width: 1024px) {
+  .typography-hero {
+    font-size: 5.75rem; /* 92px on desktop */
+  }
+}
+@media (min-width: 1536px) {
+  .typography-hero {
+    font-size: 6.5rem; /* 104px on widescreen */
+  }
+}
+
+/* Main page heading: 72-84px on desktop */
+.typography-page-title {
+  font-family: var(--font-serif);
+  font-size: 2.75rem; /* 44px on mobile */
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 640px) {
+  .typography-page-title {
+    font-size: 3.75rem; /* 60px */
+  }
+}
+@media (min-width: 1024px) {
+  .typography-page-title {
+    font-size: 4.75rem; /* 76px on desktop */
+  }
+}
+@media (min-width: 1536px) {
+  .typography-page-title {
+    font-size: 5.25rem; /* 84px on widescreen */
+  }
+}
+
+/* Section heading: 56-68px on desktop */
+.typography-section-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem; /* 36px on mobile */
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+}
+@media (min-width: 640px) {
+  .typography-section-title {
+    font-size: 3rem; /* 48px */
+  }
+}
+@media (min-width: 1024px) {
+  .typography-section-title {
+    font-size: 3.75rem; /* 60px on desktop */
+  }
+}
+@media (min-width: 1536px) {
+  .typography-section-title {
+    font-size: 4.25rem; /* 68px on widescreen */
+  }
+}
+
+/* Secondary heading: 38-48px on desktop */
+.typography-secondary-heading {
+  font-family: var(--font-serif);
+  font-size: 1.75rem; /* 28px on mobile */
+  line-height: 1.22;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+@media (min-width: 640px) {
+  .typography-secondary-heading {
+    font-size: 2.35rem; /* 38px on tablet */
+  }
+}
+@media (min-width: 1024px) {
+  .typography-secondary-heading {
+    font-size: 2.85rem; /* 46px on desktop */
+  }
+}
+
+/* Subheading: 22-26px */
+.typography-subheading {
+  font-family: var(--font-sans);
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.6;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .typography-subheading {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+/* Card / Feature heading: 24-30px on desktop */
+.typography-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem; /* 24px on mobile */
+  line-height: 1.32;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .typography-card-title {
+    font-size: 1.85rem; /* 30px on desktop */
+  }
+}
+
+/* Body text: 18px on desktop (High contrast, crystal clear) */
+.typography-body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem; /* 17px on mobile */
+  line-height: 1.8;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .typography-body {
+    font-size: 1.125rem; /* 18px on desktop */
+  }
+}
+
+/* Supporting text: 15px */
+.typography-supporting {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* Navigation: 15px */
+.typography-nav {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Eyebrow label: 13px bold uppercase */
+.typography-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------- */
+/* EXPANSIVE FULL-SCREEN LAYOUT SYSTEM (EDGE-TO-EDGE CANVAS)    */
+/* ------------------------------------------------------------- */
+
+/* Expansive container that occupies the entire screen width with comfortable edge padding */
+.editorial-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 640px) {
+  .editorial-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .editorial-container {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .editorial-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 1536px) {
+  .editorial-container {
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .editorial-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+/* Expansive section vertical padding */
+.editorial-section-py {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 1024px) {
+  .editorial-section-py {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  background-color: #702E42;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(112, 46, 66, 0.3);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #552232;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(112, 46, 66, 0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #1E293B;
+  transform: translateY(-1px);
+}
+
+.btn-secondary-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(245, 158, 11, 0.8);
+  backdrop-blur: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-secondary-light:hover {
+  background-color: #F59E0B;
+  color: #0F172A;
+  border-color: #F59E0B;
+  transform: translateY(-1px);
+}
+
+/* Hairline dividers */
+.champagne-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #D5B989 50%, transparent 100%);
+}
+
+.champagne-accent-line {
+  height: 1px;
+  width: 2.5rem;
+  background-color: #D5B989;
+}
+
+/* Refined Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #B45309;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #702E42;
+}
