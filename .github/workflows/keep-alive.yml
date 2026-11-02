@@ -1,0 +1,15 @@
+name: Keep Alive 24/7
+
+on:
+  schedule:
+    # Runs every 12 minutes to prevent Render's 15-minute sleep timer
+    - cron: '*/12 * * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Heartbeat Ping to Gurukula Server
+        run: |
+          curl -s https://shubham-karoti.onrender.com/api/health || true
